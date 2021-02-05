@@ -67,16 +67,12 @@
         <div class="flex-center position-ref full-height">
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    {{$details['title']}}
                 </div>
 
 
-                @forelse($data as $_data)
-                <p>{{$_data}} </p>
-                @empty
-                <p>empty array</p>
-                @endforelse
-
+                
+              <p>  {{$details['body']}} </p>
                
                 
             </div>
