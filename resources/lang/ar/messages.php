@@ -28,7 +28,7 @@ return [
     "Offer Name" => 'اسم العرض',
     "operation" => 'العمليات',
     "update" => 'تحديث',
-    "Offer details" => 'تفاصيل العرض',
+    "Offer Details" => 'تفاصيل العرض',
     "Update your offer"  => "تعديل العرض ",
     "delete"  => 'حذف',
     "offer not exist"  => 'العرض غير موجود',

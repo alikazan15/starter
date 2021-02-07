@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Offer;
+use App\Http\Requests\OfferRequest;
 use Illuminate\Http\Request;
 
 use Illuminate\Support\Facades\Validator;
@@ -41,20 +42,24 @@ class CrudController extends Controller
 
     }
 
-   public function store(Request $request)
+   public function store(OfferRequest $request)
    {
-        //return $request;
+        
+    
+    
+    
+    //return $request;
     
     //validate data before insert to database
 
-        $rules= $this -> getRules();
-        $messages= $this -> getMessages();
-        $validator= Validator::make($request ->all(),$rules, $messages);
+      //  $rules= $this -> getRules();
+       // $messages= $this -> getMessages();
+       // $validator= Validator::make($request ->all(),$rules, $messages);
 
-        if($validator ->fails())
-        {
-            return redirect()->back() ->withErrors($validator)->withInputs($request ->all());
-        }
+      //  if($validator ->fails())
+      //  {
+      //      return redirect()->back() ->withErrors($validator)->withInputs($request ->all());
+      //  }
         
     
     //insert 
@@ -73,7 +78,7 @@ class CrudController extends Controller
        
    }
 
-   protected function getMessages(){
+ /*  protected function getMessages(){
 
         return $messages=[
 
@@ -98,4 +103,6 @@ class CrudController extends Controller
 
 
    }
+
+   */
 }
