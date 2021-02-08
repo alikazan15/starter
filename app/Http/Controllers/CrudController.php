@@ -66,9 +66,11 @@ class CrudController extends Controller
 
         Offer::create([
 
-            'name' => $request -> name ,
-            'price' => $request -> price ,
-            'details' => $request -> details ,
+            'name_ar' => $request->name_ar,
+            'name_en' =>   $request->name_en,
+            'price' =>  $request->price,
+            'details_ar' => $request->details_ar,
+            'details_en' => $request->details_en,
 
         ]);
 
@@ -105,4 +107,13 @@ class CrudController extends Controller
    }
 
    */
+
+  public function getAllOffers(){
+
+    $offers = Offer::select('id','name_ar','name_en','price','details_ar','details_en')->get(); /*return collection of all result*/
+
+    return view('offers.all', compact('offers'));
+    
+  }
+
 }

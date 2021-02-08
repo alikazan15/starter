@@ -25,9 +25,11 @@ class offerRequest extends FormRequest
     {
         return [
 
-            'name' => 'required|max:100|unique:offers,name',
-            'price' =>'required|numeric',
-            'details' => 'required' ,
+            'name_ar' => 'required|max:100',
+            'name_en' => 'required|max:100',
+            'price' => 'required|numeric',
+            'details_ar' => 'required',
+            'details_en' => 'required',
     
         ];
     }
