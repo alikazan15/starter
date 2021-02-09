@@ -107,11 +107,9 @@
     <thead>
     <tr>
         <th scope="col">#</th>
-        <th scope="col">{{__('messages.Offer Name ar')}}</th>
-        <th scope="col">{{__('messages.Offer Name en')}}</th>
+        <th scope="col">{{__('messages.Offer Name')}}</th>
         <th scope="col">{{__('messages.Offer Price')}}</th>
-        <th scope="col">{{__('messages.Offer Details ar')}}</th>
-        <th scope="col">{{__('messages.Offer Details en')}}</th>
+        <th scope="col">{{__('messages.Offer details')}}</th>
         
     </tr>
     </thead>
@@ -121,11 +119,10 @@
     @foreach($offers as $offer)
         <tr>
             <th scope="row">{{$offer -> id}}</th>
-            <td>{{$offer -> name_ar}}</td>
-            <td>{{$offer -> name_en}}</td>
+            <td>{{$offer -> name}}</td>
             <td>{{$offer -> price}}</td>
-            <td>{{$offer -> details_ar}}</td>
-            <td>{{$offer -> details_en}}</td>
+            <td>{{$offer -> details}}</td>
+            
             
 
         </tr>
