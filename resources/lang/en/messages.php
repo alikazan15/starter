@@ -23,6 +23,7 @@ return [
     "Offer Price" => 'Offer Price',
     "Offer Details ar'" => 'ar Offer Details',
     "Offer Details en" => 'en Offer Details',
+    "Offer details" => 'Offer details',
     "Save Offer" => 'Save',
     "Offer Name" => "Offer Name",
     "Offer Details" => "Offer details",

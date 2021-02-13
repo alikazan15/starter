@@ -24,6 +24,7 @@ return [
     "Offer Price"  => 'سعر العرض',
     "Offer Details ar" => 'تفاصيل العرض بالعربي',
     "Offer Details en" => 'تفاصيل العرض بالانجليزي',
+    "Offer details" => 'تفاصيل العرض',
     "Save Offer"  => 'حفظ',
     "Offer Name" => 'اسم العرض',
     "operation" => 'العمليات',

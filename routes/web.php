@@ -30,10 +30,11 @@ Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => ['lo
 
         Route::get('all', 'CrudController@getAllOffers')->name('offers.all');
 
+        Route::get('edit/{offer_id}', 'CrudController@editOffer');
+        Route::post('update/{offer_id}', 'CrudController@UpdateOffer')->name('offers.update'); //save of edit  
 
 
-        //Route::get('edit/{offer_id}', 'CrudController@editOffer');
-        //Route::post('update/{offer_id}', 'CrudController@UpdateOffer')->name('offers.update');
+        
         //Route::get('delete/{offer_id}', 'CrudController@delete')->name('offers.delete');
        // Route::get('get-all-inactive-offer', 'CrudController@getAllInactiveOffers');
 
