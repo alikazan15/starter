@@ -29,7 +29,7 @@ class OfferRequest extends FormRequest
             'price' => 'required|numeric',
             'details_ar' => 'required',
             'details_en' => 'required',
-          //  'photo' => 'required|mimes:png,jpg,jpeg',
+            'photo' => 'required|mimes:png,jpg,jpeg',
         ];
     }
 
@@ -46,8 +46,8 @@ class OfferRequest extends FormRequest
             'price.required' => 'السعر مطلوب',
             'details_ar.required' => 'ألتفاصيل مطلوبة ',
             'details_en.required' => 'ألتفاصيل مطلوبة ',
-            //'photo.required' =>  'صوره العرض مطلوب',
-            //'photo.mimes' =>  'صوره غير صالحة',
+            'photo.required' =>  'صوره العرض مطلوب',
+            'photo.mimes' =>  'صوره غير صالحة',
 
         ];
     }

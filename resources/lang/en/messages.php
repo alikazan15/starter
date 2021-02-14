@@ -35,4 +35,5 @@ return [
     "offer deleted successfully" => "offer deleted successfully",
     "price is required" => "Price is required",
     "details is required" => "Details is required" ,
+    "Insert Photo" => "Insert Photo",
 ];

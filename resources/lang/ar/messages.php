@@ -36,5 +36,6 @@ return [
     "offer deleted successfully" => 'تم حذف العرض بنجاح',
     "price is required" => "سعر العرض تم",
     "details is required" => "التفاصيل مطلوبة",
+    "Insert Photo" => "اختر صورة العرض",
 
  ];
