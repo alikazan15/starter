@@ -33,15 +33,26 @@ Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => ['lo
         Route::get('edit/{offer_id}', 'CrudController@editOffer');
         Route::post('update/{offer_id}', 'CrudController@UpdateOffer')->name('offers.update'); //save of edit  
 
+        Route::get('delete/{offer_id}', 'CrudController@delete')->name('offers.delete');
 
-        
-        //Route::get('delete/{offer_id}', 'CrudController@delete')->name('offers.delete');
        // Route::get('get-all-inactive-offer', 'CrudController@getAllInactiveOffers');
 
     });
 
-   // Route::get('youtube', 'CrudController@getVideo') ->middleware('auth');
+    Route::get('youtube', 'CrudController@getVideo') ->middleware('auth');
 });
+
+
+###################### Begin Ajax routes #####################
+Route::group(['prefix' => 'ajax-offers'], function () {
+    Route::get('create', 'OfferController@create');
+    Route::post('store', 'OfferController@store')->name('ajax.offers.store');
+    Route::get('all', 'OfferController@all')->name('ajax.offers.all');
+    Route::post('delete', 'OfferController@delete')->name('ajax.offers.delete');
+    Route::get('edit/{offer_id}', 'OfferController@edit')->name('ajax.offers.edit');
+    Route::post('update', 'OfferController@Update')->name('ajax.offers.update');
+});
+###################### End Ajax routes #####################
 
 
 

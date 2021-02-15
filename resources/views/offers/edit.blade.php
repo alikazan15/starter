@@ -94,6 +94,7 @@
         <div class="flex-center position-ref full-height">
             <div class="content">
                 <div class="title m-b-md">
+                <br>
 
               {{__('messages.Update your offer')}}
                     
@@ -106,8 +107,16 @@
                 @endif     
                 <br>   
 
-        <form method="POST" action="{{route('offers.update',$offer -> id)}}">
+        <form method="POST" action="{{route('offers.update',$offer -> id)}}" enctype="multipart/form-data">
             @csrf
+
+            <div class="form-group">
+                <label for="exampleInputEmail1">أختر صوره العرض</label>
+                <input type="file" class="form-control" name="photo">
+                @error('photo')
+                <small class="form-text text-danger">{{$message}}</small>
+                @enderror
+            </div>
 
         <div class="form-group">
             <label for="exampleInputEmail1">{{__('messages.Offer Name ar')}}</label>

@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Offer;
+use App\Models\Video;
+use App\Events\VideoViewer;
 use App\Http\Requests\OfferRequest;
 use Illuminate\Http\Request;
 use App\Traits\OfferTrait;
@@ -137,15 +139,32 @@ class CrudController extends Controller
         if (!$offer)
             return redirect()->back(); // if id does not existe back 
 
-        $offer = Offer::select('id', 'name_ar', 'name_en', 'details_ar', 'details_en', 'price')->find($offer_id);
+        $offer = Offer::select('id', 'name_ar', 'name_en', 'details_ar', 'details_en', 'price','photo')->find($offer_id);
 
         return view('offers.edit', compact('offer'));
 
     }
 
+    public function delete($offer_id)
+    {
+        //check if offer id exists
+
+        $offer = Offer::find($offer_id);   // Offer::where('id','$offer_id') -> first();
+
+        if (!$offer)
+            return redirect()->back()->with(['error' => __('messages.offer not exist')]);
+
+        $offer->delete();
+
+        return redirect()
+            ->route('offers.all')
+            ->with(['success' => __('messages.offer deleted successfully')]);
+
+    }
+
     public function UpdateOffer(OfferRequest $request, $offer_id)
     {
-        //validation 
+        //validtion
 
         // chek if offer exists
 
@@ -165,6 +184,17 @@ class CrudController extends Controller
               'price' => $request->price,
           ]);*/
 
+    }
+        
+
+
+
+
+    public function getVideo()
+    {
+        $video = Video::first();
+        event(new VideoViewer($video)); //fire event
+        return view('video')->with('video', $video);
     }
 
    
