@@ -11,10 +11,13 @@
 |
 */
 
-Route::get('/admin', function () {
-    return 'hello admin';
-});
 
-//route name
+/*
+Route::get('/admin', function () {
+
+     return 'hellow admin';
+});*/
+
+
 
 
