@@ -89,6 +89,7 @@ Route::get('get-user-has-phone-with-condition','Relation\RelationsController@get
 Route::get('get-user-not-has-phone','Relation\RelationsController@getUserNotHasPhone');
 
 ################## Begin one To many Relationship #####################
+
 Route::get('hospital-has-many','Relation\RelationsController@getHospitalDoctors');
 
 Route::get('hospitals','Relation\RelationsController@hospitals') -> name('hospital.all');
