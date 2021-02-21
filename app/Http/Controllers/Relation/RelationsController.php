@@ -147,7 +147,7 @@ class RelationsController extends Controller
 
     public function getDoctorServices()
     {
-        return $doctor = Doctor::with('services')->find(3);
+        return $doctor = Doctor::with('services')->find(6);
         //  return $doctor -> services;
     }
 
